@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070716">
+<meta name="description" content="Galaxy-themed accessible enterprise dashboard.">
+<meta property="og:title" content="EnterpriseHub Dashboard">
+<meta property="og:description" content="Accessible semantic enterprise dashboard.">
+<title>Dashboard Overview | EnterpriseHub</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/theme.js" defer></script><script src="js/modal.js" defer></script><script src="js/dashboard.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+<header>
+  <a class="brand" href="index.html" aria-label="EnterpriseHub home">✦ Enterprise<span>Hub</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="index.html" aria-current="page">Dashboard</a></li><li><a href="users.html">Users</a></li><li><a href="reports.html">Reports</a></li><li><a href="settings.html">Settings</a></li>
+  </ul></nav>
+  <div class="header-tools">
+    <div class="search-box" role="search">
+      <label class="visually-hidden" for="dashboard-search">Search dashboard</label>
+      <input id="dashboard-search" type="search" placeholder="Search..." aria-describedby="search-results">
+    </div>
+    <button class="btn btn-ghost" id="theme-toggle" type="button" aria-pressed="false">Daylight mode</button>
+    <button class="btn btn-ghost" type="button" aria-expanded="false" aria-controls="notification-panel" id="notification-button">Notifications</button>
+  </div>
+  <div id="notification-panel" class="notification-panel" hidden role="status" aria-live="polite">
+    <h2>Notifications</h2><p>2 access requests need review.</p>
+  </div>
+</header>
+
+<aside aria-label="Sidebar">
+  <nav aria-label="Sidebar navigation">
+    <h2>Workspace</h2>
+    <ul><li><a href="index.html" aria-current="page">Overview</a></li><li><a href="users.html">Team members</a></li><li><a href="reports.html">Analytics</a></li><li><a href="settings.html">Preferences</a></li></ul>
+  </nav>
+  <section class="panel" aria-labelledby="sidebar-help"><h2 id="sidebar-help">Quick help</h2><p class="muted">Use Tab to move through controls and Enter to activate links and buttons.</p></section>
+</aside>
+
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Dashboard</li></ol></nav>
+
+<section aria-labelledby="dashboard-title">
+  <p class="eyebrow">Deep-space workspace</p><h1 id="dashboard-title">Dashboard</h1>
+  <p class="lead">A semantic, keyboard-friendly enterprise control center.</p>
+  <button class="btn btn-primary" type="button" data-open-modal>Add team member</button>
+</section>
+
+<section class="content-section" aria-labelledby="kpi-heading">
+<h2 id="kpi-heading">Key metrics</h2>
+<div class="kpi-grid">
+<article class="card"><p class="kpi-label">Active users</p><p class="kpi-value">12,480</p><p class="kpi-trend up"><span aria-hidden="true">▲</span> 8.2% <span class="visually-hidden">increase</span> since <time datetime="2026-09">September</time></p></article>
+<article class="card"><p class="kpi-label">Storage used</p><p class="kpi-value">68%</p><label class="visually-hidden" for="storage">Storage used</label><progress id="storage" value="68" max="100">68%</progress></article>
+<article class="card"><p class="kpi-label">System status</p><p><span class="badge ok">Operational</span></p></article>
+<article class="card"><p class="kpi-label">Open issues</p><p class="kpi-value">27</p><p class="kpi-trend down"><span aria-hidden="true">▼</span> 3.4% <span class="visually-hidden">decrease</span> this week</p></article>
+</div>
+</section>
+
+<section class="content-section" aria-labelledby="chart-title">
+<h2 id="chart-title">Weekly activity</h2>
+<figure class="card chart-card">
+<svg class="chart" viewBox="0 0 700 260" role="img" aria-label="Weekly activity rises from Monday to Friday and dips slightly on the weekend">
+<polyline points="40,205 145,170 250,180 355,120 460,90 565,115 660,75" fill="none" stroke="currentColor" stroke-width="5"></polyline>
+<circle cx="40" cy="205" r="7" fill="currentColor"></circle><circle cx="145" cy="170" r="7" fill="currentColor"></circle><circle cx="250" cy="180" r="7" fill="currentColor"></circle><circle cx="355" cy="120" r="7" fill="currentColor"></circle><circle cx="460" cy="90" r="7" fill="currentColor"></circle><circle cx="565" cy="115" r="7" fill="currentColor"></circle><circle cx="660" cy="75" r="7" fill="currentColor"></circle>
+</svg>
+<figcaption>Activity trend for the current week.</figcaption>
+</figure>
+<div class="table-wrap chart-data"><table><caption>Weekly activity data</caption><thead><tr><th scope="col">Day</th><th scope="col">Activity</th></tr></thead><tbody><tr><th scope="row">Monday</th><td>420</td></tr><tr><th scope="row">Tuesday</th><td>510</td></tr><tr><th scope="row">Wednesday</th><td>485</td></tr><tr><th scope="row">Thursday</th><td>620</td></tr><tr><th scope="row">Friday</th><td>710</td></tr><tr><th scope="row">Saturday</th><td>650</td></tr><tr><th scope="row">Sunday</th><td>760</td></tr></tbody></table></div>
+</section>
+
+<section class="content-section" aria-labelledby="activity-title">
+<h2 id="activity-title">Recent activity</h2>
+<ol class="timeline">
+<li><article class="card"><h3>New project created</h3><p>Engineering created Project Aurora.</p><time datetime="2026-10-04T09:30:00+05:30">4 October 2026, 9:30 AM</time></article></li>
+<li><article class="card"><h3>Access request</h3><p>Two members requested access to analytics.</p><time datetime="2026-10-03T15:10:00+05:30">3 October 2026, 3:10 PM</time></article></li>
+</ol>
+</section>
+</main>
+
+<footer><p>&copy; 2026 EnterpriseHub · Version 1.0</p><nav aria-label="Footer"><a href="README.md">Accessibility documentation</a> · <a href="404.html">Help</a></nav></footer>
+</div>
+
+<dialog id="user-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
+<div class="modal-inner"><div class="modal-header"><div><h2 id="modal-title">Add team member</h2><p id="modal-description">Fields marked required must be completed.</p></div><button class="icon-button" type="button" data-close-modal aria-label="Close dialog">×</button></div>
+<form id="user-form" novalidate><fieldset><legend>Account information</legend>
+<div class="form-grid"><div><label class="required" for="full-name">Full name</label><input id="full-name" name="full-name" type="text" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="name-error"><p id="name-error" class="error-text" role="alert"></p></div>
+<div><label class="required" for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error"><p id="email-error" class="error-text" role="alert"></p></div></div></fieldset>
+<p id="form-message" class="form-message" role="status" aria-live="polite"></p><div class="modal-actions"><button class="btn btn-ghost" type="button" data-close-modal>Cancel</button><button class="btn btn-primary" type="submit">Create account</button></div></form></div>
+</dialog>
+</body></html>
